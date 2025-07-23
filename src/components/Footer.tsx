@@ -4,13 +4,25 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-sbie-dark-green text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <footer className="bg-gradient-to-br from-sbie-dark-green via-sbie-olive to-sbie-dark-green text-white relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-20 left-20 w-32 h-32 bg-sbie-copper/30 rounded-full animate-pulse" />
+        <div className="absolute bottom-20 right-20 w-24 h-24 bg-sbie-beige/20 rounded-full animate-bounce" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-1/2 left-1/3 w-16 h-16 bg-sbie-neutral-green/40 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
+      </div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-6">
-            <div className="font-serif text-3xl font-bold">
-              sbie
+            <div className="space-y-2">
+              <div className="font-serif text-3xl font-bold">
+                sbie
+              </div>
+              <div className="text-xs text-white/60">
+                Sociedade Brasileira de Inteligência Emocional
+              </div>
             </div>
             <p className="text-white/80 leading-relaxed">
               Sociedade Brasileira de Inteligência Emocional. 

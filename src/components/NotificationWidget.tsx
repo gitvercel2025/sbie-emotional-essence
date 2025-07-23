@@ -8,28 +8,40 @@ const NotificationWidget = () => {
 
   const notifications = [
     {
-      name: "Bruna de Rio de Janeiro, Brasil",
-      action: "baixou o livro 'The Strategy Gap'",
-      time: "47 min atrás",
-      location: "Rio de Janeiro, RJ"
-    },
-    {
-      name: "Carlos de São Paulo, Brasil", 
-      action: "se inscreveu no curso A.L.E.X.",
-      time: "23 min atrás",
+      name: "Maria Silva de São Paulo, Brasil",
+      action: "se inscreveu no LOTUS Inteligência Emocional",
+      time: "2 min atrás",
       location: "São Paulo, SP"
     },
     {
-      name: "Ana de Brasília, Brasil",
-      action: "baixou o Guia Estratégico",
-      time: "12 min atrás", 
+      name: "João Santos do Rio de Janeiro, Brasil", 
+      action: "baixou o material da SBIE",
+      time: "5 min atrás",
+      location: "Rio de Janeiro, RJ"
+    },
+    {
+      name: "Ana Costa de Belo Horizonte, Brasil",
+      action: "iniciou a Formação em Inteligência Emocional",
+      time: "8 min atrás", 
+      location: "Belo Horizonte, MG"
+    },
+    {
+      name: "Carlos Lima de Brasília, Brasil",
+      action: "se inscreveu no SBIE Business",
+      time: "12 min atrás",
       location: "Brasília, DF"
     },
     {
-      name: "Miguel de Porto Alegre, Brasil",
-      action: "acessou o Success Code",
-      time: "8 min atrás",
+      name: "Julia Mendes de Porto Alegre, Brasil",
+      action: "baixou o material LOTUS Legado",
+      time: "15 min atrás",
       location: "Porto Alegre, RS"
+    },
+    {
+      name: "Pedro Oliveira de Salvador, Brasil",
+      action: "se inscreveu nos Embaixadores do Bem",
+      time: "18 min atrás",
+      location: "Salvador, BA"
     }
   ];
 

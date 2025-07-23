@@ -1,22 +1,16 @@
 import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
-import ALEXSection from "@/components/ALEXSection";
-import RodrigoFonsecaSection from "@/components/RodrigoFonsecaSection";
 import CoursesSection from "@/components/CoursesSection";
-import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import NotificationWidget from "@/components/NotificationWidget";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
-const Index = () => {
+const Courses = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <HeroSection />
-      <ALEXSection />
-      <RodrigoFonsecaSection />
-      <CoursesSection />
-      <ContactForm />
+      <div className="pt-20">
+        <CoursesSection />
+      </div>
       <Footer />
       <NotificationWidget />
       <WhatsAppButton />
@@ -24,4 +18,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Courses;

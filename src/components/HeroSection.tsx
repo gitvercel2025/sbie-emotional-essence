@@ -28,14 +28,14 @@ const HeroSection = () => {
                 <span className="text-glow text-sbie-copper">está no lugar que você</span>
               </h1>
               <h2 className="font-serif text-4xl lg:text-6xl font-bold text-sbie-copper">
-                menos imagina
+                nunca procurou
               </h2>
             </div>
 
             {/* Subtitle */}
             <p className="text-xl lg:text-2xl text-white/90 leading-relaxed max-w-2xl">
               Se você anda se sentindo perdido, não é fracasso, é falta de estratégia. 
-              Desenvolva sua inteligência emocional e transforme sua vida pessoal e profissional.
+              Equilibre suas emoções e descubra como criar a vida que sempre sonhou.
             </p>
 
             {/* CTA Buttons */}
@@ -85,8 +85,8 @@ const HeroSection = () => {
                     <span className="font-serif text-2xl font-bold">R.F.</span>
                   </div>
                   <div className="bg-sbie-copper rounded-lg px-4 py-2 inline-block">
-                    <span className="text-sm font-semibold">Global Expert</span>
-                    <div className="text-xs opacity-90">Strategic Coaching</div>
+                    <span className="text-sm font-semibold">Presidente SBIE</span>
+                    <div className="text-xs opacity-90">Mentor Emocional</div>
                   </div>
                 </div>
               </div>
