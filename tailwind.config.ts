@@ -61,7 +61,18 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				sbie: {
+					beige: 'hsl(var(--sbie-beige))',
+					copper: 'hsl(var(--sbie-copper))',
+					'dark-green': 'hsl(var(--sbie-dark-green))',
+					olive: 'hsl(var(--sbie-olive))',
+					'neutral-green': 'hsl(var(--sbie-neutral-green))'
 				}
+			},
+			fontFamily: {
+				'serif': ['DM Serif Display', 'serif'],
+				'poppins': ['Poppins', 'sans-serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
