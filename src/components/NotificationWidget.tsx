@@ -78,7 +78,7 @@ const NotificationWidget = () => {
       "fixed bottom-6 left-6 z-50 transition-all duration-500 ease-in-out transform",
       isVisible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
     )}>
-      <div className="bg-gradient-to-br from-white via-sbie-beige/30 to-white rounded-2xl shadow-2xl border border-sbie-copper/20 p-5 max-w-sm animate-slide-in-right backdrop-blur-sm">
+      <div className="bg-sbie-dark-green rounded-xl shadow-2xl border border-sbie-olive/30 p-4 max-w-sm">
         <div className="flex items-start space-x-4">
           {/* Notification Dot */}
           <div className="flex-shrink-0 mt-1">
@@ -89,22 +89,23 @@ const NotificationWidget = () => {
           <div className="flex-1 min-w-0">
             <div className="flex items-start justify-between">
               <div>
-                <p className="text-sm font-bold text-sbie-dark-green">
+                <p className="text-sm font-bold text-white">
                   {notification?.name}
                 </p>
-                <p className="text-sm text-sbie-olive mt-1 font-medium">
+                <p className="text-sm text-sbie-beige mt-1">
                   {notification?.action}
                 </p>
-                <div className="flex items-center mt-3 text-xs bg-sbie-copper/10 rounded-full px-3 py-1">
-                  <span className="text-sbie-copper font-bold">● Live</span>
-                  <span className="mx-2 text-sbie-neutral-green">•</span>
-                  <span className="text-sbie-neutral-green font-medium">{notification?.time}</span>
+                <div className="flex items-center mt-3 text-xs bg-sbie-olive/80 rounded-full px-3 py-1">
+                  <span className="w-2 h-2 bg-sbie-copper rounded-full mr-2"></span>
+                  <span className="text-white font-bold">Live</span>
+                  <span className="mx-2 text-sbie-beige/50">•</span>
+                  <span className="text-sbie-beige/80 font-medium">{notification?.time}</span>
                 </div>
               </div>
               
               <button
                 onClick={() => setIsVisible(false)}
-                className="flex-shrink-0 text-sbie-neutral-green hover:text-sbie-dark-green transition-colors hover:bg-sbie-copper/10 rounded-full p-1"
+                className="flex-shrink-0 text-sbie-beige/50 hover:text-white transition-colors rounded-full p-1"
               >
                 <X size={16} />
               </button>

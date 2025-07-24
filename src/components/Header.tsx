@@ -48,28 +48,10 @@ const Header = () => {
     { name: "IMPRENSA", href: "#imprensa" },
     { name: "STORE", href: "#store" },
     { name: "CONTATO", href: "/contact" },
-    { name: "POLÍTICA DE PRIVACIDADE", href: "/privacy" },
-    { name: "TERMOS DE USO", href: "/terms" },
   ];
 
   return (
     <>
-      {/* MEC Recognition Banner */}
-      <div className="bg-gradient-to-r from-sbie-copper to-sbie-olive text-white py-4 px-4 shadow-lg">
-        <div className="max-w-7xl mx-auto flex justify-center items-center">
-          <div className="flex items-center space-x-4">
-            <img 
-              src="https://verboemmovimento.com/wp-content/uploads/2024/07/image.png" 
-              alt="Selo MEC" 
-              className="h-10 w-auto filter brightness-0 invert"
-            />
-            <span className="text-lg font-bold uppercase tracking-wide">
-              🏆 Treinamentos Reconhecidos pelo MEC
-            </span>
-          </div>
-        </div>
-      </div>
-
       {/* Top Bar */}
       <div className="bg-sbie-dark-green text-white py-2 px-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center text-sm">
@@ -92,21 +74,34 @@ const Header = () => {
         </div>
       </div>
 
+      {/* MEC Recognition Banner */}
+      <div className="bg-gradient-to-r from-sbie-copper to-sbie-olive text-white py-4 px-4 shadow-lg">
+        <div className="max-w-7xl mx-auto flex justify-center items-center">
+          <div className="flex items-center space-x-4">
+            <img 
+              src="https://verboemmovimento.com/wp-content/uploads/2024/07/image.png" 
+              alt="Selo MEC" 
+              className="h-10 w-auto"
+            />
+            <span className="text-lg font-bold uppercase tracking-wide">
+              🏆 Treinamentos Reconhecidos pelo MEC
+            </span>
+          </div>
+        </div>
+      </div>
+
       {/* Main Header */}
       <header className="bg-background/95 backdrop-blur-md sticky top-0 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <div className="flex items-center space-x-3">
-            <a href="/" className="flex flex-col items-start space-y-1">
+            <a href="/" className="flex flex-col items-start space-y-1 group">
                 <img 
                   src="https://i.imgur.com/vnMj83l.png" 
                   alt="SBIE Logo" 
-                  className="h-16 w-auto"
+                  className="h-20 w-auto transition-transform duration-300 ease-in-out group-hover:scale-110"
                 />
-                <span className="text-xs text-sbie-dark-green font-medium max-w-[200px] leading-tight">
-                  Sociedade Brasileira de Inteligência Emocional
-                </span>
               </a>
             </div>
 

@@ -1,6 +1,26 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Clock, Users, Star, BookOpen } from "lucide-react";
+import { ArrowRight, Clock, Users, Star, BookOpen, Feather, BrainCircuit, Crown, Sparkles, Building2, HeartHandshake } from "lucide-react";
+
+const getIconForLevel = (level: string) => {
+  const iconProps = { size: 28, className: "text-white drop-shadow-lg" };
+  switch (level.toLowerCase()) {
+    case 'iniciante':
+      return <Feather {...iconProps} />;
+    case 'avançado':
+      return <BrainCircuit {...iconProps} />;
+    case 'profissional':
+      return <Crown {...iconProps} />;
+    case 'master':
+      return <Sparkles {...iconProps} />;
+    case 'corporativo':
+      return <Building2 {...iconProps} />;
+    case 'social':
+      return <HeartHandshake {...iconProps} />;
+    default:
+      return <BookOpen {...iconProps} />;
+  }
+};
 
 const CoursesSection = () => {
   const courses = [
@@ -89,8 +109,8 @@ const CoursesSection = () => {
                 <div className="aspect-video bg-gradient-to-br from-sbie-copper/20 to-sbie-olive/20 flex items-center justify-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-sbie-dark-green/80 to-sbie-olive/80" />
                   <div className="relative text-center text-white p-6">
-                  <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-sbie-copper to-sbie-olive backdrop-blur-sm flex items-center justify-center mb-4 shadow-2xl border-4 border-white/40">
-                    <BookOpen size={28} className="text-white drop-shadow-lg" />
+                  <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-sbie-copper to-sbie-olive backdrop-blur-sm flex items-center justify-center mb-4 shadow-2xl border-4 border-white/40 transition-all duration-300 group-hover:scale-110 group-hover:shadow-sbie-copper/40 group-hover:border-white">
+                    {getIconForLevel(course.level)}
                   </div>
                     <div className="font-serif text-lg font-bold">{course.level}</div>
                   </div>

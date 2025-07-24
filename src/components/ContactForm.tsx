@@ -8,7 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
-const ContactForm = () => {
+const ContactForm = ({ onOpenForm }: { onOpenForm: () => void }) => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
@@ -110,16 +110,16 @@ const ContactForm = () => {
               </CardContent>
             </Card>
 
-            {/* Work with Us */}
-            <Card className="card-modern bg-gradient-to-br from-sbie-copper/10 to-sbie-olive/10 border-0">
-              <CardHeader>
-                <CardTitle className="text-sbie-dark-green font-serif">Trabalhe Conosco</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-sbie-olive">
+            {/* Work With Us Card */}
+            <Card className="card-modern bg-white/80 backdrop-blur-sm border-0">
+              <CardContent className="p-8 text-center">
+                <h3 className="font-serif text-2xl font-bold text-sbie-dark-green mb-3">
+                  Trabalhe Conosco
+                </h3>
+                <p className="text-sbie-olive mb-6 leading-relaxed">
                   Faça parte da nossa missão de transformar vidas através da Inteligência Emocional.
                 </p>
-                <Button className="w-full btn-sbie-primary">
+                <Button onClick={onOpenForm} size="lg" className="btn-sbie-primary w-full">
                   Ver Oportunidades
                 </Button>
               </CardContent>

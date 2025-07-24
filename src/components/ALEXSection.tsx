@@ -104,15 +104,6 @@ const ALEXSection = () => {
                 Conheça Nossos Treinamentos
                 <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
-              
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="btn-sbie-outline bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white hover:text-sbie-dark-green px-8 py-4 text-lg font-semibold"
-              >
-                <Download size={20} className="mr-2" />
-                Material Gratuito
-              </Button>
             </div>
           </div>
 
@@ -120,9 +111,11 @@ const ALEXSection = () => {
           <div className="relative">
             <div className="card-modern bg-white/5 backdrop-blur-md border border-white/10 p-8 hover:bg-white/10 transition-all duration-500">
               <div className="text-center space-y-6">
-                <div className="w-24 h-24 mx-auto rounded-full bg-gradient-to-br from-sbie-copper to-sbie-olive flex items-center justify-center">
-                  <span className="font-serif text-2xl font-bold text-white">RF</span>
-                </div>
+                <img 
+                  src="https://i.imgur.com/iFAS2HT.jpeg" 
+                  alt="Rodrigo Fonseca" 
+                  className="w-24 h-24 mx-auto rounded-full object-cover border-4 border-white/20"
+                />
                 
                 <div>
                   <h3 className="font-serif text-2xl font-bold text-white mb-2">
