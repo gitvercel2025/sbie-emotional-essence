@@ -137,8 +137,10 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-white/60 text-sm">
-            © {currentYear} SBIE - Sociedade Brasileira de Inteligência Emocional. Todos os direitos reservados.
+          <p className="text-white/60 text-sm text-center md:text-left">
+            Copyright © 2025 Sbie - Todos os direitos reservados
+            <br />
+            Rua Curupá, 595 - Anália Franco - São Paulo - SP - 03355-010
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-white/60 hover:text-sbie-copper transition-colors text-sm">

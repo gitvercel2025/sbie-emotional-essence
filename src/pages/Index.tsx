@@ -5,8 +5,10 @@ import ALEXSection from "@/components/ALEXSection";
 import RodrigoFonsecaSection from "@/components/RodrigoFonsecaSection";
 import CoursesSection from "@/components/CoursesSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import BlogSection from "@/components/BlogSection";
 import WorkWithUsForm from "@/components/WorkWithUsForm";
 import ContactForm from "@/components/ContactForm";
+import QuoteSection from "@/components/QuoteSection";
 import Footer from "@/components/Footer";
 import NotificationWidget from "@/components/NotificationWidget";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -23,7 +25,9 @@ const Index = () => {
       <RodrigoFonsecaSection />
       <CoursesSection />
       <TestimonialsSection />
+      <BlogSection />
       <ContactForm onOpenForm={() => setIsFormOpen(true)} />
+      <QuoteSection />
       <Footer />
       <NotificationWidget />
       <WhatsAppButton />

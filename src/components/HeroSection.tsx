@@ -32,9 +32,9 @@ const HeroSection = () => {
               className="font-serif text-5xl md:text-6xl font-bold leading-tight animate-fade-in-up"
               style={{ animationDelay: '0.2s' }}
             >
-              Desvende o Poder da sua{" "}
+              A resposta que você tanto busca, está no{" "}
               <span className="text-glow bg-clip-text text-transparent bg-gradient-to-r from-sbie-copper to-yellow-300">
-                Inteligência Emocional
+                lugar que você nunca procurou
               </span>
             </h1>
 

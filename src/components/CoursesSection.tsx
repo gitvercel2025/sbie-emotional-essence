@@ -2,6 +2,18 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Clock, Users, Star, BookOpen, Feather, BrainCircuit, Crown, Sparkles, Building2, HeartHandshake } from "lucide-react";
 
+// Define the type for a single course
+interface Course {
+  title: string;
+  description: string;
+  duration: string;
+  students: string;
+  rating: string;
+  level: string;
+  image: string;
+  link: string;
+}
+
 const getIconForLevel = (level: string) => {
   const iconProps = { size: 28, className: "text-white drop-shadow-lg" };
   switch (level.toLowerCase()) {
@@ -23,7 +35,7 @@ const getIconForLevel = (level: string) => {
 };
 
 const CoursesSection = () => {
-  const courses = [
+  const courses: Course[] = [
     {
       title: "LOTUS Inteligência Emocional",
       description: "Desenvolva sua inteligência emocional com metodologia comprovada. Aprenda a gerenciar emoções e melhorar relacionamentos.",
@@ -87,56 +99,38 @@ const CoursesSection = () => {
   ];
 
   return (
-    <section className="py-12 lg:py-20 soft-gradient">
+    <section id="treinamentos" className="py-20 md:py-28 bg-gray-50 dark:bg-sbie-dark-green-alt">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center space-y-6 mb-16">
-          <div className="inline-flex items-center bg-sbie-copper/10 rounded-full px-6 py-3 border border-sbie-copper/20">
-            <BookOpen size={20} className="mr-2 text-sbie-copper" />
-            <span className="text-sbie-copper text-sm font-medium">Nossos Treinamentos</span>
-          </div>
-          
-          <h2 className="font-serif text-4xl lg:text-6xl font-bold text-sbie-dark-green leading-tight">
-            Transforme sua vida com{" "}
-            <span className="text-sbie-copper">Inteligência Emocional</span>
-          </h2>
-          
-          <p className="text-xl text-sbie-olive max-w-3xl mx-auto leading-relaxed">
-            Descubra nossos programas desenvolvidos para cada etapa da sua jornada de desenvolvimento pessoal e profissional.
+        <div className="text-center mb-16">
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-sbie-dark-green dark:text-white">Nossos Treinamentos</h2>
+          <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Jornadas de transformação pessoal e profissional para você assumir o controle da sua vida.
           </p>
         </div>
-
-        {/* Courses Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {courses.map((course, index) => (
-            <Card key={index} className="card-modern group overflow-hidden bg-white border-0 flex flex-col">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {courses.map((course) => (
+            <Card key={course.title} className="card-modern group overflow-hidden bg-white border-0 flex flex-col">
               <div className="relative overflow-hidden">
                 {/* Course Image Placeholder */}
                 <div className="aspect-video bg-gradient-to-br from-sbie-copper/20 to-sbie-olive/20 flex items-center justify-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-sbie-dark-green/80 to-sbie-olive/80" />
                   <div className="relative text-center text-white p-6">
-                  <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-sbie-copper to-sbie-olive backdrop-blur-sm flex items-center justify-center mb-4 shadow-2xl border-4 border-white/40 transition-all duration-300 group-hover:scale-110 group-hover:shadow-sbie-copper/40 group-hover:border-white">
-                    {getIconForLevel(course.level)}
-                  </div>
+                    <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-sbie-copper to-sbie-olive backdrop-blur-sm flex items-center justify-center mb-4 shadow-2xl border-4 border-white/40 transition-all duration-300 group-hover:scale-110 group-hover:shadow-sbie-copper/40 group-hover:border-white">
+                      {getIconForLevel(course.level)}
+                    </div>
                     <div className="font-serif text-lg font-bold">{course.level}</div>
                   </div>
                 </div>
-                
-                {/* Level Badge */}
-                <div className="absolute top-4 left-4 bg-sbie-copper text-white px-3 py-1 rounded-full text-xs font-semibold">
-                  {course.level}
-                </div>
               </div>
-
               <CardContent className="p-6 flex flex-col flex-grow">
-                  <div className="space-y-3 flex-grow">
-                    <h3 className="font-serif text-2xl font-bold text-sbie-dark-green group-hover:text-sbie-copper transition-colors leading-tight tracking-wide">
-                      {course.title}
-                    </h3>
-                    <p className="text-sbie-olive text-base leading-relaxed font-medium">
-                      {course.description}
-                    </p>
-                  </div>
+                <div className="space-y-3 flex-grow">
+                  <h3 className="font-serif text-2xl font-bold text-sbie-dark-green group-hover:text-sbie-copper transition-colors leading-tight tracking-wide">
+                    {course.title}
+                  </h3>
+                  <p className="text-sbie-olive text-base leading-relaxed font-medium">
+                    {course.description}
+                  </p>
+                </div>
 
                 {/* Course Stats */}
                 <div className="grid grid-cols-2 gap-4 pt-4 mt-4 border-t border-gray-100">
