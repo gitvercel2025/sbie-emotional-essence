@@ -4,7 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import ALEXSection from "@/components/ALEXSection";
 import RodrigoFonsecaSection from "@/components/RodrigoFonsecaSection";
 import CoursesSection from "@/components/CoursesSection";
-
+import TestimonialsSection from "@/components/TestimonialsSection";
 import WorkWithUsForm from "@/components/WorkWithUsForm";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
@@ -22,6 +22,7 @@ const Index = () => {
       <ALEXSection />
       <RodrigoFonsecaSection />
       <CoursesSection />
+      <TestimonialsSection />
       <ContactForm onOpenForm={() => setIsFormOpen(true)} />
       <Footer />
       <NotificationWidget />

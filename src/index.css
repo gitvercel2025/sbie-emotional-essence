@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 33.3333%; /* Show 3 slides by default */
+  min-width: 0;
+}
+
+@media (max-width: 1024px) {
+  .embla__slide {
+    flex: 0 0 50%; /* Show 2 slides on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .embla__slide {
+    flex: 0 0 100%; /* Show 1 slide on mobile */
+  }
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
