@@ -7,13 +7,13 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
-    { name: "QUEM SOMOS", href: "#quem-somos" },
-    { name: "TREINAMENTOS", href: "#treinamentos" },
+    { name: "QUEM SOMOS", href: "/about" },
+    { name: "TREINAMENTOS", href: "/courses" },
     { name: "ONLINE", href: "#online" },
     { name: "BLOG", href: "#blog" },
     { name: "IMPRENSA", href: "#imprensa" },
     { name: "STORE", href: "#store" },
-    { name: "CONTATO", href: "#contato" },
+    { name: "CONTATO", href: "/contact" },
   ];
 
   return (
@@ -47,18 +47,10 @@ const Header = () => {
             {/* Logo */}
             <div className="flex items-center space-x-3">
               <img 
-                src="/src/assets/sbie-symbol.png" 
-                alt="SBIE Symbol" 
-                className="w-10 h-10"
+                src="https://i.imgur.com/2Qo6FUn.png" 
+                alt="SBIE Logo" 
+                className="h-12 w-auto"
               />
-              <div className="flex flex-col">
-                <div className="font-serif text-3xl font-bold text-sbie-dark-green">
-                  sbie
-                </div>
-                <div className="text-xs text-sbie-olive font-medium -mt-1">
-                  Sociedade Brasileira de Inteligência Emocional
-                </div>
-              </div>
             </div>
 
             {/* Desktop Navigation */}
