@@ -89,9 +89,9 @@ const CoursesSection = () => {
                 <div className="aspect-video bg-gradient-to-br from-sbie-copper/20 to-sbie-olive/20 flex items-center justify-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-sbie-dark-green/80 to-sbie-olive/80" />
                   <div className="relative text-center text-white p-6">
-                    <div className="w-16 h-16 mx-auto rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mb-4">
-                      <BookOpen size={24} />
-                    </div>
+                  <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-sbie-copper to-sbie-olive backdrop-blur-sm flex items-center justify-center mb-4 shadow-2xl border-4 border-white/40">
+                    <BookOpen size={28} className="text-white drop-shadow-lg" />
+                  </div>
                     <div className="font-serif text-lg font-bold">{course.level}</div>
                   </div>
                 </div>
@@ -103,14 +103,14 @@ const CoursesSection = () => {
               </div>
 
               <CardContent className="p-6 space-y-4">
-                <div className="space-y-3">
-                  <h3 className="font-serif text-2xl font-bold text-sbie-dark-green group-hover:text-sbie-copper transition-colors leading-tight">
-                    {course.title}
-                  </h3>
-                  <p className="text-sbie-olive text-base leading-relaxed">
-                    {course.description}
-                  </p>
-                </div>
+                  <div className="space-y-3">
+                    <h3 className="font-serif text-2xl font-bold text-sbie-dark-green group-hover:text-sbie-copper transition-colors leading-tight tracking-wide">
+                      {course.title}
+                    </h3>
+                    <p className="text-sbie-olive text-base leading-relaxed font-medium">
+                      {course.description}
+                    </p>
+                  </div>
 
                 {/* Course Stats */}
                 <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gray-100">

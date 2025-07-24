@@ -25,11 +25,11 @@ const HeroSection = () => {
             <div className="space-y-4">
               <h1 className="font-serif text-5xl lg:text-7xl font-bold leading-tight">
                 A resposta que você tanto busca,{" "}
-                <span className="text-glow text-sbie-copper">está no lugar que você</span>
+                <span className="text-glow text-sbie-copper">está no lugar que você</span>{" "}
+                <span className="font-serif text-4xl lg:text-6xl font-bold text-sbie-copper block mt-2">
+                  nunca procurou
+                </span>
               </h1>
-              <h2 className="font-serif text-4xl lg:text-6xl font-bold text-sbie-copper">
-                nunca procurou
-              </h2>
             </div>
 
             {/* Subtitle */}
@@ -38,40 +38,24 @@ const HeroSection = () => {
               Equilibre suas emoções e descubra como criar a vida que sempre sonhou.
             </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button 
-                size="lg" 
-                className="btn-sbie-primary group px-8 py-4 text-lg font-semibold"
-              >
-                <Play size={20} className="mr-2" />
-                Acesse o Código de Sucesso
-                <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="btn-sbie-outline bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white hover:text-sbie-dark-green px-8 py-4 text-lg font-semibold"
-              >
-                <Download size={20} className="mr-2" />
-                Baixe o Guia Estratégico
-              </Button>
-            </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 pt-8 border-t border-white/20">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-8 border-t border-white/20">
               <div className="text-center">
-                <div className="font-serif text-3xl lg:text-4xl font-bold text-sbie-copper">20+</div>
-                <div className="text-sm text-white/80 mt-1">Anos de Experiência</div>
+                <div className="font-serif text-2xl lg:text-3xl font-bold text-sbie-copper">26</div>
+                <div className="text-xs text-white/80 mt-1">Anos de Experiência</div>
               </div>
               <div className="text-center">
-                <div className="font-serif text-3xl lg:text-4xl font-bold text-sbie-copper">30+</div>
-                <div className="text-sm text-white/80 mt-1">Países Atendidos</div>
+                <div className="font-serif text-2xl lg:text-3xl font-bold text-sbie-copper">200k+</div>
+                <div className="text-xs text-white/80 mt-1">Vidas Transformadas</div>
               </div>
               <div className="text-center">
-                <div className="font-serif text-3xl lg:text-4xl font-bold text-sbie-copper">1000+</div>
-                <div className="text-sm text-white/80 mt-1">Vidas Transformadas</div>
+                <div className="font-serif text-2xl lg:text-3xl font-bold text-sbie-copper">4</div>
+                <div className="text-xs text-white/80 mt-1">Best Sellers - Livros Publicados</div>
+              </div>
+              <div className="text-center">
+                <div className="font-serif text-2xl lg:text-3xl font-bold text-sbie-copper">FGV</div>
+                <div className="text-xs text-white/80 mt-1">Professor FGV - MBA C-Levels</div>
               </div>
             </div>
           </div>

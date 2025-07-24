@@ -12,44 +12,55 @@ const WhatsAppButton = () => {
   return (
     <Button
       onClick={handleWhatsAppClick}
-      className="fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full bg-sbie-copper hover:bg-sbie-copper/90 shadow-2xl hover:shadow-sbie-copper/25 transition-all duration-300 hover:scale-110 group border-2 border-white/20"
+      className="fixed bottom-6 right-6 z-50 w-18 h-18 rounded-full bg-gradient-to-br from-sbie-copper to-sbie-olive hover:from-sbie-olive hover:to-sbie-copper shadow-2xl hover:shadow-sbie-copper/40 transition-all duration-500 hover:scale-110 group border-3 border-white/30 backdrop-blur-sm"
       size="icon"
     >
-      {/* Brain with heart icon in SVG */}
+      {/* Thinking person icon */}
       <svg 
-        width="28" 
-        height="28" 
+        width="32" 
+        height="32" 
         viewBox="0 0 24 24" 
         fill="none" 
-        className="text-white group-hover:animate-pulse"
+        className="text-white group-hover:animate-bounce"
       >
-        <path 
-          d="M12 2C8.5 2 6 4.5 6 8c0 1.5 0.5 3 1.5 4 1 1 2.5 1.5 4.5 1.5s3.5-0.5 4.5-1.5c1-1 1.5-2.5 1.5-4 0-3.5-2.5-6-6-6z" 
+        {/* Head */}
+        <circle 
+          cx="12" 
+          cy="8" 
+          r="3" 
           stroke="currentColor" 
-          strokeWidth="1.5" 
-          strokeLinecap="round" 
-          strokeLinejoin="round"
+          strokeWidth="2" 
+          fill="none"
         />
+        {/* Body */}
         <path 
-          d="M12 22c-2.5 0-4.5-2-4.5-4.5 0-1 0.5-2 1.5-2.5" 
+          d="M12 14v6" 
           stroke="currentColor" 
-          strokeWidth="1.5" 
-          strokeLinecap="round" 
-          strokeLinejoin="round"
+          strokeWidth="2" 
+          strokeLinecap="round"
         />
+        {/* Thinking bubbles */}
+        <circle cx="16" cy="6" r="1" fill="currentColor" opacity="0.7" />
+        <circle cx="18" cy="4" r="1.5" fill="currentColor" opacity="0.5" />
+        <circle cx="20" cy="2" r="2" fill="currentColor" opacity="0.3" />
+        {/* Arms in thinking pose */}
         <path 
-          d="M16.5 15c1 0.5 1.5 1.5 1.5 2.5 0 2.5-2 4.5-4.5 4.5" 
+          d="M9 16l-2 2M15 16l2 2" 
           stroke="currentColor" 
-          strokeWidth="1.5" 
-          strokeLinecap="round" 
-          strokeLinejoin="round"
+          strokeWidth="2" 
+          strokeLinecap="round"
         />
+        {/* Hand to chin gesture */}
         <path 
-          d="M10 10c0 1.1 0.9 2 2 2s2-0.9 2-2-0.9-2-2-2-2 0.9-2 2z" 
-          fill="currentColor"
+          d="M10 10l-1 -1" 
+          stroke="currentColor" 
+          strokeWidth="2" 
+          strokeLinecap="round"
         />
       </svg>
-      <div className="absolute -top-2 -right-2 w-4 h-4 bg-sbie-olive rounded-full animate-pulse border-2 border-white" />
+      <div className="absolute -top-1 -right-1 w-5 h-5 bg-gradient-to-br from-green-400 to-green-600 rounded-full animate-pulse border-2 border-white shadow-lg">
+        <span className="absolute inset-0 flex items-center justify-center text-xs font-bold text-white">💬</span>
+      </div>
     </Button>
   );
 };

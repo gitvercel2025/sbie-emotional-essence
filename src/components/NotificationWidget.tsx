@@ -78,33 +78,33 @@ const NotificationWidget = () => {
       "fixed bottom-6 left-6 z-50 transition-all duration-500 ease-in-out transform",
       isVisible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
     )}>
-      <div className="bg-white rounded-lg shadow-xl border border-gray-200 p-4 max-w-sm animate-slide-in-right">
-        <div className="flex items-start space-x-3">
+      <div className="bg-gradient-to-br from-white via-sbie-beige/30 to-white rounded-2xl shadow-2xl border border-sbie-copper/20 p-5 max-w-sm animate-slide-in-right backdrop-blur-sm">
+        <div className="flex items-start space-x-4">
           {/* Notification Dot */}
           <div className="flex-shrink-0 mt-1">
-            <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+            <div className="w-4 h-4 bg-gradient-to-br from-green-400 to-green-600 rounded-full animate-pulse shadow-lg border-2 border-white" />
           </div>
           
           {/* Content */}
           <div className="flex-1 min-w-0">
             <div className="flex items-start justify-between">
               <div>
-                <p className="text-sm font-semibold text-sbie-dark-green">
+                <p className="text-sm font-bold text-sbie-dark-green">
                   {notification?.name}
                 </p>
-                <p className="text-sm text-gray-600 mt-1">
+                <p className="text-sm text-sbie-olive mt-1 font-medium">
                   {notification?.action}
                 </p>
-                <div className="flex items-center mt-2 text-xs text-gray-500">
-                  <span className="text-green-600 font-medium">● Live</span>
-                  <span className="mx-1">•</span>
-                  <span>{notification?.time}</span>
+                <div className="flex items-center mt-3 text-xs bg-sbie-copper/10 rounded-full px-3 py-1">
+                  <span className="text-sbie-copper font-bold">● Live</span>
+                  <span className="mx-2 text-sbie-neutral-green">•</span>
+                  <span className="text-sbie-neutral-green font-medium">{notification?.time}</span>
                 </div>
               </div>
               
               <button
                 onClick={() => setIsVisible(false)}
-                className="flex-shrink-0 text-gray-400 hover:text-gray-600 transition-colors"
+                className="flex-shrink-0 text-sbie-neutral-green hover:text-sbie-dark-green transition-colors hover:bg-sbie-copper/10 rounded-full p-1"
               >
                 <X size={16} />
               </button>
