@@ -63,7 +63,7 @@ const NotificationWidget = () => {
       showNotification();
       // Hide after 8 seconds
       setTimeout(hideNotification, 8000);
-    }, 15000);
+    }, 20000);
 
     return () => {
       clearTimeout(initialTimer);

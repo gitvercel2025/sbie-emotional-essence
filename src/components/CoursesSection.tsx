@@ -31,7 +31,8 @@ const CoursesSection = () => {
       students: "500+",
       rating: "4.9",
       level: "Iniciante",
-      image: "/lovable-uploads/5a9be274-6422-4a19-8a78-83cc343e4f3a.png"
+      image: "/lovable-uploads/5a9be274-6422-4a19-8a78-83cc343e4f3a.png",
+      link: "https://lp.sbie.com.br/lotus/?utm_source=sitesbie&utm_medium=menu&utm_campaign=lotus"
     },
     {
       title: "LOTUS Legado",
@@ -40,7 +41,8 @@ const CoursesSection = () => {
       students: "300+",
       rating: "4.8",
       level: "Avançado",
-      image: "/lovable-uploads/da379568-1dad-416f-bbda-a7a6535e0c62.png"
+      image: "/lovable-uploads/da379568-1dad-416f-bbda-a7a6535e0c62.png",
+      link: "https://lp.sbie.com.br/lotus-legado/?utm_source=sitesbie&utm_medium=menu&utm_campaign=legado"
     },
     {
       title: "Formação em Inteligência Emocional",
@@ -49,7 +51,8 @@ const CoursesSection = () => {
       students: "200+", 
       rating: "4.9",
       level: "Profissional",
-      image: "/lovable-uploads/5a9be274-6422-4a19-8a78-83cc343e4f3a.png"
+      image: "/lovable-uploads/5a9be274-6422-4a19-8a78-83cc343e4f3a.png",
+      link: "https://lp.sbie.com.br/formacao/?utm_source=sitesbie&utm_medium=menu&utm_campaign=formacao"
     },
     {
       title: "Formação Master em Inteligência Emocional",
@@ -58,7 +61,8 @@ const CoursesSection = () => {
       students: "150+",
       rating: "5.0", 
       level: "Master",
-      image: "/lovable-uploads/da379568-1dad-416f-bbda-a7a6535e0c62.png"
+      image: "/lovable-uploads/da379568-1dad-416f-bbda-a7a6535e0c62.png",
+      link: "https://lp.sbie.com.br/formacao-master-oportunidade-unica/?utm_source=sitesbie&utm_medium=menu&utm_campaign=formacao-master"
     },
     {
       title: "SBIE Business",
@@ -67,7 +71,8 @@ const CoursesSection = () => {
       students: "50+ empresas",
       rating: "4.9",
       level: "Corporativo", 
-      image: "/lovable-uploads/5a9be274-6422-4a19-8a78-83cc343e4f3a.png"
+      image: "/lovable-uploads/5a9be274-6422-4a19-8a78-83cc343e4f3a.png",
+      link: "https://lp.sbie.com.br/business/?utm_source=sitesbie&utm_medium=menu&utm_campaign=business"
     },
     {
       title: "Embaixadores do Bem",
@@ -76,7 +81,8 @@ const CoursesSection = () => {
       students: "100+",
       rating: "4.8",
       level: "Social",
-      image: "/lovable-uploads/da379568-1dad-416f-bbda-a7a6535e0c62.png"
+      image: "/lovable-uploads/da379568-1dad-416f-bbda-a7a6535e0c62.png",
+      link: "https://lp.sbie.com.br/embaixadores-do-bem/?utm_source=sitesbie&utm_medium=menu&utm_campaign=embaixadores"
     }
   ];
 
@@ -103,7 +109,7 @@ const CoursesSection = () => {
         {/* Courses Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {courses.map((course, index) => (
-            <Card key={index} className="card-modern group overflow-hidden bg-white border-0">
+            <Card key={index} className="card-modern group overflow-hidden bg-white border-0 flex flex-col">
               <div className="relative overflow-hidden">
                 {/* Course Image Placeholder */}
                 <div className="aspect-video bg-gradient-to-br from-sbie-copper/20 to-sbie-olive/20 flex items-center justify-center relative overflow-hidden">
@@ -122,8 +128,8 @@ const CoursesSection = () => {
                 </div>
               </div>
 
-              <CardContent className="p-6 space-y-4">
-                  <div className="space-y-3">
+              <CardContent className="p-6 flex flex-col flex-grow">
+                  <div className="space-y-3 flex-grow">
                     <h3 className="font-serif text-2xl font-bold text-sbie-dark-green group-hover:text-sbie-copper transition-colors leading-tight tracking-wide">
                       {course.title}
                     </h3>
@@ -133,7 +139,7 @@ const CoursesSection = () => {
                   </div>
 
                 {/* Course Stats */}
-                <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gray-100">
+                <div className="grid grid-cols-2 gap-4 pt-4 mt-4 border-t border-gray-100">
                   <div className="flex items-center space-x-2 text-sm text-sbie-olive">
                     <Clock size={16} />
                     <span>{course.duration}</span>
@@ -145,7 +151,7 @@ const CoursesSection = () => {
                 </div>
 
                 {/* Rating */}
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2 mt-4">
                   <div className="flex items-center">
                     {[...Array(5)].map((_, i) => (
                       <Star 
@@ -159,10 +165,14 @@ const CoursesSection = () => {
                 </div>
 
                 {/* CTA Button */}
-                <Button className="w-full btn-sbie-primary group mt-6">
-                  Saiba Mais
-                  <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                <div className="mt-6">
+                  <a href={course.link} target="_blank" rel="noopener noreferrer" className="block">
+                    <Button className="w-full btn-sbie-primary group">
+                      Saiba Mais
+                      <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </a>
+                </div>
               </CardContent>
             </Card>
           ))}
