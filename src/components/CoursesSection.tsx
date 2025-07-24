@@ -103,11 +103,11 @@ const CoursesSection = () => {
               </div>
 
               <CardContent className="p-6 space-y-4">
-                <div className="space-y-2">
-                  <h3 className="font-serif text-xl font-bold text-sbie-dark-green group-hover:text-sbie-copper transition-colors">
+                <div className="space-y-3">
+                  <h3 className="font-serif text-2xl font-bold text-sbie-dark-green group-hover:text-sbie-copper transition-colors leading-tight">
                     {course.title}
                   </h3>
-                  <p className="text-sbie-olive text-sm leading-relaxed">
+                  <p className="text-sbie-olive text-base leading-relaxed">
                     {course.description}
                   </p>
                 </div>

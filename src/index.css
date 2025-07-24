@@ -136,7 +136,7 @@ All colors MUST be HSL.
 @layer components {
   /* Hero Section Styles */
   .hero-gradient {
-    background: var(--gradient-hero);
+    background: linear-gradient(135deg, hsl(var(--sbie-dark-green)) 0%, hsl(var(--sbie-olive)) 50%, hsl(var(--sbie-dark-green)) 100%);
   }
   
   .accent-gradient {
@@ -144,7 +144,7 @@ All colors MUST be HSL.
   }
   
   .soft-gradient {
-    background: var(--gradient-soft);
+    background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--sbie-beige)) 50%, hsl(var(--background)) 100%);
   }
   
   /* Modern Button Variants */

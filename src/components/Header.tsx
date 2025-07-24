@@ -1,15 +1,28 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, Mail } from "lucide-react";
+import { Menu, X, Phone, Mail, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isOnlineDropdownOpen, setIsOnlineDropdownOpen] = useState(false);
 
   const navigation = [
     { name: "QUEM SOMOS", href: "/about" },
     { name: "TREINAMENTOS", href: "/courses" },
-    { name: "ONLINE", href: "#online" },
+    { 
+      name: "ONLINE", 
+      href: "#online",
+      hasDropdown: true,
+      submenu: [
+        { name: "SBIE ACADEMY", href: "#academy" },
+        { name: "SBIE CARE", href: "#care" },
+        { name: "ACADEMIA EMOCIONAL", href: "#academia-emocional" },
+        { name: "GERANDO COM AMOR", href: "#gerando-amor" },
+        { name: "ALMAS GÊMEAS", href: "#almas-gemeas" },
+        { name: "LIVROS DIGITAIS", href: "#livros-digitais" },
+      ]
+    },
     { name: "BLOG", href: "#blog" },
     { name: "IMPRENSA", href: "#imprensa" },
     { name: "STORE", href: "#store" },
@@ -18,6 +31,22 @@ const Header = () => {
 
   return (
     <>
+      {/* MEC Recognition Banner */}
+      <div className="bg-white border-b border-sbie-neutral-green/20 py-3 px-4">
+        <div className="max-w-7xl mx-auto flex justify-center items-center">
+          <div className="flex items-center space-x-4 text-sbie-dark-green">
+            <img 
+              src="https://verboemmovimento.com/wp-content/uploads/2024/07/image.png" 
+              alt="Selo MEC" 
+              className="h-8 w-auto"
+            />
+            <span className="text-sm font-medium">
+              Treinamentos Reconhecidos pelo MEC
+            </span>
+          </div>
+        </div>
+      </div>
+
       {/* Top Bar */}
       <div className="bg-sbie-dark-green text-white py-2 px-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center text-sm">
@@ -46,23 +75,54 @@ const Header = () => {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <div className="flex items-center space-x-3">
-              <img 
-                src="https://i.imgur.com/2Qo6FUn.png" 
-                alt="SBIE Logo" 
-                className="h-12 w-auto"
-              />
+              <a href="/" className="flex items-center space-x-3">
+                <img 
+                  src="https://i.imgur.com/BCg25F3.png" 
+                  alt="SBIE Logo" 
+                  className="h-12 w-auto"
+                />
+              </a>
             </div>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
               {navigation.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-sm uppercase tracking-wide"
-                >
-                  {item.name}
-                </a>
+                <div key={item.name} className="relative">
+                  {item.hasDropdown ? (
+                    <div className="relative">
+                      <button
+                        onClick={() => setIsOnlineDropdownOpen(!isOnlineDropdownOpen)}
+                        className="flex items-center text-foreground hover:text-primary transition-colors duration-300 font-medium text-sm uppercase tracking-wide"
+                      >
+                        {item.name}
+                        <ChevronDown size={16} className="ml-1" />
+                      </button>
+                      
+                      {/* Dropdown Menu */}
+                      {isOnlineDropdownOpen && (
+                        <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-sbie-neutral-green/20 py-2 z-50">
+                          {item.submenu?.map((subItem) => (
+                            <a
+                              key={subItem.name}
+                              href={subItem.href}
+                              className="block px-4 py-3 text-sm text-sbie-dark-green hover:bg-sbie-beige/50 transition-colors"
+                              onClick={() => setIsOnlineDropdownOpen(false)}
+                            >
+                              {subItem.name}
+                            </a>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <a
+                      href={item.href}
+                      className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-sm uppercase tracking-wide"
+                    >
+                      {item.name}
+                    </a>
+                  )}
+                </div>
               ))}
             </nav>
 

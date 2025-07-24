@@ -76,14 +76,17 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Image/Video Placeholder */}
+          {/* Rodrigo Fonseca Image */}
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-700">
-              <div className="aspect-[4/5] bg-gradient-to-br from-sbie-copper to-sbie-olive flex items-center justify-center">
-                <div className="text-center text-white p-8">
-                  <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 inline-block mb-4">
-                    <span className="font-serif text-2xl font-bold">R.F.</span>
-                  </div>
+              <div className="aspect-[4/5] bg-gradient-to-br from-sbie-copper to-sbie-olive relative overflow-hidden">
+                <img 
+                  src="https://www.sbie.com.br/wp-content/uploads/2023/05/IMG_0303-98-683x1024.jpg.webp" 
+                  alt="Rodrigo Fonseca - Presidente SBIE" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-sbie-dark-green/80 via-transparent to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                   <div className="bg-sbie-copper rounded-lg px-4 py-2 inline-block">
                     <span className="text-sm font-semibold">Presidente SBIE</span>
                     <div className="text-xs opacity-90">Mentor Emocional</div>

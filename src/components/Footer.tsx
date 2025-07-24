@@ -119,8 +119,24 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Certification Seals */}
+        <div className="border-t border-white/20 mt-12 pt-8">
+          <div className="flex justify-center items-center space-x-8 mb-8">
+            <img 
+              src="https://www.sbie.com.br/wp-content/webp-express/webp-images/uploads/2019/05/selo-cinza.png.webp" 
+              alt="Selo SBIE" 
+              className="h-16 w-auto opacity-80 hover:opacity-100 transition-opacity"
+            />
+            <img 
+              src="https://verboemmovimento.com/wp-content/uploads/2024/07/image.png" 
+              alt="Selo MEC" 
+              className="h-16 w-auto opacity-80 hover:opacity-100 transition-opacity"
+            />
+          </div>
+        </div>
+
         {/* Bottom Bar */}
-        <div className="border-t border-white/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/60 text-sm">
             © {currentYear} SBIE - Sociedade Brasileira de Inteligência Emocional. Todos os direitos reservados.
           </p>
