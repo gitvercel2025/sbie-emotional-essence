@@ -52,38 +52,18 @@ const Header = () => {
 
   return (
     <>
-      {/* Top Bar */}
-      <div className="bg-sbie-dark-green text-white py-2 px-4">
-        <div className="max-w-7xl mx-auto flex justify-between items-center text-sm">
-          <div className="flex items-center space-x-6">
-            <a href="mailto:contato@sbie.com.br" className="flex items-center space-x-2 hover:text-sbie-copper transition-colors">
-              <Mail size={16} />
-              <span>contato@sbie.com.br</span>
-            </a>
-            <a href="tel:+5511940069695" className="flex items-center space-x-2 hover:text-sbie-copper transition-colors">
-              <Phone size={16} />
-              <span>+55 11 94006-9695</span>
-            </a>
-          </div>
-          <div className="flex space-x-4">
-            <a href="https://www.facebook.com/sbie.oficial/" target="_blank" rel="noopener noreferrer" className="hover:text-sbie-copper transition-colors">Facebook</a>
-            <a href="https://www.youtube.com/sbiemocional" target="_blank" rel="noopener noreferrer" className="hover:text-sbie-copper transition-colors">YouTube</a>
-            <a href="https://www.linkedin.com/school/sbie/" target="_blank" rel="noopener noreferrer" className="hover:text-sbie-copper transition-colors">LinkedIn</a>
-            <a href="https://www.instagram.com/sbie.oficial/" target="_blank" rel="noopener noreferrer" className="hover:text-sbie-copper transition-colors">Instagram</a>
-          </div>
-        </div>
-      </div>
+
 
       {/* MEC Recognition Banner */}
-      <div className="bg-gradient-to-r from-sbie-copper to-sbie-olive text-white py-4 px-4 shadow-lg">
-        <div className="max-w-7xl mx-auto flex justify-center items-center">
-          <div className="flex items-center space-x-4">
+      <div className="bg-gradient-to-r from-sbie-copper to-sbie-olive text-white py-2 px-4 shadow-md">
+        <div className="max-w-7xl mx-auto flex justify-center items-center text-center">
+          <div className="flex items-center space-x-2">
             <img 
               src="https://verboemmovimento.com/wp-content/uploads/2024/07/image.png" 
               alt="Selo MEC" 
-              className="h-10 w-auto"
+              className="h-6 sm:h-7 w-auto"
             />
-            <span className="text-lg font-bold uppercase tracking-wide">
+            <span className="text-[11px] sm:text-sm font-bold uppercase tracking-wider">
               🏆 Treinamentos Reconhecidos pelo MEC
             </span>
           </div>

@@ -20,28 +20,46 @@ const ContactForm = ({ onOpenForm }: { onOpenForm: () => void }) => {
     interest: ""
   });
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    toast({
-      title: "Mensagem enviada com sucesso!",
-      description: "Entraremos em contato em breve.",
-    });
-    
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      subject: "",
-      message: "",
-      interest: ""
-    });
-    
+
+    const { name, email, phone, subject, message, interest } = formData;
+
+    if (!name || !email || !subject || !message) {
+      toast({
+        title: "Erro",
+        description: "Por favor, preencha todos os campos obrigatórios.",
+        variant: "destructive",
+      });
+      setIsSubmitting(false);
+      return;
+    }
+
+    const whatsappNumber = "5511940069695";
+    const formattedMessage = `Olá, SBIE! ✨
+
+Eu gostaria de mais informações.
+
+👤 *Nome:* ${name}
+📧 *Email:* ${email}
+📞 *Telefone:* ${phone || 'Não informado'}
+🎯 *Interesse:* ${interest || 'Não especificado'}
+📄 *Assunto:* ${subject}
+
+📝 *Mensagem:*
+${message}
+`;
+
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(formattedMessage)}`;
+
+    window.open(whatsappUrl, '_blank');
     setIsSubmitting(false);
+
+    toast({
+      title: "Redirecionando para o WhatsApp!",
+      description: "Sua mensagem está pronta para ser enviada.",
+    });
   };
 
   const handleChange = (field: string, value: string) => {
@@ -49,7 +67,7 @@ const ContactForm = ({ onOpenForm }: { onOpenForm: () => void }) => {
   };
 
   return (
-    <section className="py-20 lg:py-32 soft-gradient">
+    <section className="py-12 lg:py-20 soft-gradient">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center space-y-6 mb-16">
@@ -182,7 +200,7 @@ const ContactForm = ({ onOpenForm }: { onOpenForm: () => void }) => {
                         <SelectTrigger className="border-sbie-beige focus:border-sbie-copper">
                           <SelectValue placeholder="Selecione seu interesse" />
                         </SelectTrigger>
-                        <SelectContent>
+                        <SelectContent position="popper" className="z-[9999]">
                           <SelectItem value="lotus">LOTUS Inteligência Emocional</SelectItem>
                           <SelectItem value="formacao">Formação em IE</SelectItem>
                           <SelectItem value="business">SBIE Business</SelectItem>

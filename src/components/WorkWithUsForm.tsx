@@ -37,17 +37,18 @@ const WorkWithUsForm = () => {
   };
 
   return (
-    <div className="bg-sbie-dark-green text-white p-8 md:p-12">
-        <div className="text-center space-y-4 mb-12">
-          <h2 className="font-serif text-4xl lg:text-6xl font-bold">
+    <div className="relative bg-sbie-dark-green text-white p-6 md:p-10 rounded-lg max-h-[90vh] overflow-y-auto">
+        {/* O botão de fechar do Dialog em Index.tsx cuidará disso */}
+        <div className="text-center space-y-3 mb-8">
+          <h2 className="font-serif text-3xl lg:text-4xl font-bold">
             Trabalhe Conosco
           </h2>
-          <p className="text-xl text-sbie-beige max-w-2xl mx-auto">
+          <p className="text-lg text-sbie-beige max-w-2xl mx-auto">
             Faça parte de um time que transforma vidas. Envie seu currículo e venha crescer com a gente.
           </p>
         </div>
 
-        <div className="bg-sbie-olive/20 p-8 rounded-2xl border border-sbie-copper/20 backdrop-blur-sm">
+        <div className="bg-sbie-olive/20 p-6 rounded-lg border border-sbie-copper/20 backdrop-blur-sm">
           <form className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>

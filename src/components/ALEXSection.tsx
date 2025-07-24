@@ -3,7 +3,7 @@ import { ArrowRight, Play, Download } from "lucide-react";
 
 const ALEXSection = () => {
   return (
-    <section className="py-20 lg:py-32 bg-sbie-dark-green relative overflow-hidden">
+    <section className="py-12 lg:py-20 bg-sbie-dark-green relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{

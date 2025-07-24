@@ -28,9 +28,9 @@ const Index = () => {
       <WhatsAppButton />
 
       <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
-        <DialogContent className="p-0 bg-transparent border-none max-w-4xl w-full">
+        <DialogContent className="p-0 bg-transparent border-none max-w-2xl w-full">
           <WorkWithUsForm />
-          <DialogClose className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+          <DialogClose className="absolute right-4 top-4 z-[9999] rounded-full bg-black/50 p-1.5 opacity-80 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6 text-white"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
             <span className="sr-only">Close</span>
           </DialogClose>
